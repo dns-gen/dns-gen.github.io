@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,maximum-scale=2"> -->
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=12fb5ac118f60fc848f9070667ec29611b3d087c">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>contrast-plc.github.io</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Background" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Contrastive learning for real-time packet loss concealment" />
+<meta property="og:description" content="Contrastive learning for real-time packet loss concealment" />
+<link rel="canonical" href="https://contrast-plc.github.io/" />
+<meta property="og:url" content="https://contrast-plc.github.io/" />
+<meta property="og:site_name" content="contrast-plc.github.io" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Background" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Contrastive learning for real-time packet loss concealment","headline":"Background","name":"contrast-plc.github.io","url":"https://contrast-plc.github.io/"}</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+<!-- End Jekyll SEO tag -->
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+          <header class="inner">
+  
+  
+            <h1 id="project_title">CONTRAST-PLC: CONTRASTIVE LEARNING FOR REAL-TIME PACKET LOSS CONCEALMENT</h1>
+            <!-- <h2 id="project_tagline">A feature-domain packet loss concealment algorithm</h2> -->
+  
+  
+          </header>
+      </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <b>This website is to show some demos of our research work 'CONTRAST-PLC: CONTRASTIVE LEARNING FOR REAL-TIME PACKET LOSS CONCEALMENT' submitted to  <a href="https://2023.ieeeicassp.org/">ICASSP 2023</a>.</b>
+<!-- <b>This work has been accepted by <a href="https://interspeech2022.org/">INTERSPEECH2022</a>.</b>
+<h2>Background </h2>
+<p>Neural audio coding has shown very promising results recently in the literature to largely outperform traditional codecs but limited attention has been paid on its error resilience. Neural codecs trained considering only source coding tend to be extremely sensitive to channel noises, especially in wireless channels with high error rate.</p>
+<p>With the significant breakthroughs made in deep learning and generative models, the common practice nowadays is to use a deep-learning based PLC algorithm to reconstruct lost packets as a post-processing stage on the waveform. The problem of this scheme is that the PLC methods  are highly dependent on the codec output. Models trained on uncompressed speech usually degrade a lot when being used directly on the decoded audio without a finetuning or retraining on the codec output. Also, its maximum potential is limited by the codec’s quality.</p>
+<h2>Solution</h2>
+<p>In the context of neural audio/speech coding, we propose a feature-domain packet loss concealment algorithm (FD-PLC). Specifically, we introduce a self-attention-based module on the received latent features to recover lost frames in the feature domain before the decoder. A hybrid segment-level and frame-level frequency-domain discriminator is employed to guide the network to focus on both the generative quality of lost frames and the continuity with neighbouring frames.</p>
+<p><img src="/assets/images/main_structure_2.png" alt="overall structure" /></p>
+More details, please see our paper.
+<h2>Results</h2> -->
+
+<h2>Comparison with other schemes</h2>
+  <table>
+    <tr>
+      <th>loss rate(%)/max burst loss(ms)</th>
+      <th>lossy</th>
+      <th>baseline</th>
+      <th>proposed w/o contrastive</th>
+      <th>proposed</th>
+      <th>target</th>
+    </tr>
+    <tr>
+      <td>77.9/140</td>
+      <td><audio title="54_lossy.wav" src="/assets/files/lossy/54.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="54_baseline.wav" src="/assets/files/unet_baseline/54.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="54_no_contrast.wav" src="/assets/files/proposed_without_contrastive/54.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="54_proposed.wav" src="/assets/files/proposed/54.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="54_target.wav" src="/assets/files/target/54.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+
+    <tr>
+      <td>39.5/120</td>
+      <td><audio title="141142_lossy.wav" src="/assets/files/lossy/141142.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="141142_baseline.wav" src="/assets/files/unet_baseline/141142.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="141142_no_contrast.wav" src="/assets/files/proposed_without_contrastive/141142.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="141142_proposed.wav" src="/assets/files/proposed/141142.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="141142_target.wav" src="/assets/files/target/141142.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+
+    <tr>
+      <td>44.8/120</td>
+      <td><audio title="152880_lossy.wav" src="/assets/files/lossy/152880.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="152880_baseline.wav" src="/assets/files/unet_baseline/152880.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="152880_no_contrast.wav" src="/assets/files/proposed_without_contrastive/152880.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="152880_proposed.wav" src="/assets/files/proposed/152880.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="152880_target.wav" src="/assets/files/target/152880.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+    <tr>
+      <td>17/180</td>
+      <td><audio title="158592_lossy.wav" src="/assets/files/lossy/158592.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="158592_baseline.wav" src="/assets/files/unet_baseline/158592.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="158592_no_contrast.wav" src="/assets/files/proposed_without_contrastive/158592.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="158592_proposed.wav" src="/assets/files/proposed/158592.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="158592_target.wav" src="/assets/files/target/158592.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+    <tr>
+      <td>27/160</td>
+      <td><audio title="170127_lossy.wav" src="/assets/files/lossy/170127.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="170127_baseline.wav" src="/assets/files/unet_baseline/170127.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="170127_no_contrast.wav" src="/assets/files/proposed_without_contrastive/170127.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="170127_proposed.wav" src="/assets/files/proposed/170127.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="170127_target.wav" src="/assets/files/target/170127.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+    
+  </table>
+<h2>Ablation study on auxiliary branch</h2>
+  <table>
+    <tr>
+      <th>proposed</th>
+      <th>w/o auxiliary branch</th>
+    </tr>
+    <tr>
+      <td><audio title="54_proposed.wav" src="/assets/files/proposed/54.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="54_no_auxiliary.wav" src="/assets/files/proposed_no_auxiliary_branch/54.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+    <tr>
+      <td><audio title="104264_proposed.wav" src="/assets/files/proposed/104264.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="104264_no_auxiliary.wav" src="/assets/files/proposed_no_auxiliary_branch/104264.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+    <tr>
+      <td><audio title="118312_proposed.wav" src="/assets/files/proposed/118312.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="118312_no_auxiliary.wav" src="/assets/files/proposed_no_auxiliary_branch/118312.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+    <tr>
+      <td><audio title="158592_proposed.wav" src="/assets/files/proposed/158592.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="158592_no_auxiliary.wav" src="/assets/files/proposed_no_auxiliary_branch/158592.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+    <tr>
+      <td><audio title="170127_proposed.wav" src="/assets/files/proposed/170127.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+      <td><audio title="170127_no_auxiliary.wav" src="/assets/files/proposed_no_auxiliary_branch/170127.wav?raw=true" type=audio/wav controls> 
+        Your browser does not support the audio element.
+      </audio></td>
+    </tr>
+  </table>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
