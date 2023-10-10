@@ -1,4 +1,4 @@
-# contrast-plc.github.io
-Contrastive Learning for Real-time Packet Loss Concealment
+# dns-gen.github.io
+LOW-LATENCY SPEECH ENHANCEMENT VIA SPEECH TOKEN GENERATION
 
-The website is for extensive results for our paper **\<CONTRAST-PLC: CONTRASTIVE LEARNING FOR REAL-TIME PACKET LOSS CONCEALMENT\>** which is submitted to [ICASSP2023](https://2023.ieeeicassp.org/).
+The website is for extensive results for our paper **\<LOW-LATENCY SPEECH ENHANCEMENT VIA SPEECH TOKEN GENERATION\>** which is submitted to [ICASSP2024](https://2024.ieeeicassp.org/).
